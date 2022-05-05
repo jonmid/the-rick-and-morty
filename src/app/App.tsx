@@ -1,5 +1,6 @@
 import React from 'react'
 import { Character } from './components/Character'
+import { ListCharacter } from './components/ListCharacter'
 
 function App() {
   return (

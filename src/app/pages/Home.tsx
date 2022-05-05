@@ -25,13 +25,6 @@ const Home = () => {
       <ListCharacter>
         <Character />
         <Character />
-        <Character />
-        <Character />
-        <Character />
-        <Character />
-        <Character />
-        <Character />
-        <Character />
       </ListCharacter>
     </Layout>
   )

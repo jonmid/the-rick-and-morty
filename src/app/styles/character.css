@@ -1,5 +1,5 @@
 .character {
-  @apply flex flex-col items-center justify-center max-w-xs;
+  @apply flex flex-col items-center justify-center w-full max-w-xs;
 }
 
 .character__image {

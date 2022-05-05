@@ -1,11 +1,3 @@
-.home-logo {
-  @apply flex items-center justify-center py-10;
-}
-
-.home-logo img {
-  @apply w-[650px] object-cover;
-}
-
 .home-favorite {
   @apply flex items-center space-x-4 mt-20;
 }

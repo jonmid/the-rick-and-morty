@@ -1,0 +1,7 @@
+.logo {
+  @apply flex items-center justify-center py-10;
+}
+
+.logo img {
+  @apply w-[650px] object-cover;
+}

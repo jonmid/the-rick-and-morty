@@ -1,23 +1,18 @@
 import React from 'react'
 
-import './../styles/home.css'
 import { Layout } from './../components/Layout'
 import { Logo } from '../components/Logo'
-import { Search } from '../components/Search'
 import { ListCharacter } from '../components/ListCharacter'
 import { Character } from '../components/Character'
-import { ButtonFavorite } from '../components/ButtonFavorite'
+import { TitlePage } from '../components/TitlePage'
 
-const Home = () => {
+const Bookmarks = () => {
   return (
     <Layout>
       <Logo />
 
-      <Search />
-
-      <div className='home-favorite'>
-        <ButtonFavorite />
-        <span className='home-favorite--text'>Show favorites</span>
+      <div className='mt-20'>
+        <TitlePage title='my favorites' />
       </div>
 
       <ListCharacter>
@@ -28,4 +23,4 @@ const Home = () => {
   )
 }
 
-export { Home }
+export { Bookmarks }

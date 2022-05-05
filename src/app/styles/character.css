@@ -1,0 +1,23 @@
+.character {
+  @apply flex flex-col items-center justify-center max-w-xs;
+}
+
+.character__image {
+  @apply w-full h-64 bg-gray-300 bg-center bg-cover rounded-lg shadow-md;
+}
+
+.character__info {
+  @apply w-56 -mt-10 bg-white rounded-lg shadow-lg overflow-hidden;
+}
+
+.character__info--title {
+  @apply py-2 font-bold tracking-wide text-center text-gray-800 uppercase;
+}
+
+.character__info--section {
+  @apply flex items-center justify-center px-3 py-2 bg-gray-200;
+}
+
+.character__info--section button {
+  @apply px-2 py-1 text-xs font-semibold text-white uppercase transition-colors duration-200 transform bg-gray-800 rounded hover:bg-gray-700 focus:bg-gray-700 focus:outline-none;
+}

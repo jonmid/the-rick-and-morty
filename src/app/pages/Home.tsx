@@ -1,8 +1,6 @@
 import React from 'react'
 
 import './../styles/home.css'
-import { Layout } from './../components/Layout'
-import { Logo } from '../components/Logo'
 import { Search } from '../components/Search'
 import { ListCharacter } from '../components/ListCharacter'
 import { Character } from '../components/Character'
@@ -10,9 +8,7 @@ import { ButtonFavorite } from '../components/ButtonFavorite'
 
 const Home = () => {
   return (
-    <Layout>
-      <Logo />
-
+    <>
       <Search />
 
       <div className='home-favorite'>
@@ -24,7 +20,7 @@ const Home = () => {
         <Character />
         <Character />
       </ListCharacter>
-    </Layout>
+    </>
   )
 }
 

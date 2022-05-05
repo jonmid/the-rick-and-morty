@@ -1,8 +1,11 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 import './../styles/heroDetail.css'
 
 const HeroDetail = () => {
+  const navigate = useNavigate()
+
   return (
     <section className='hero-detail'>
       <div className='hero-detail__container'>
@@ -18,7 +21,7 @@ const HeroDetail = () => {
             truffaut hexagon try-hard chambray.
           </p>
 
-          <button>Return</button>
+          <button onClick={() => navigate(-1)}>Return</button>
         </div>
       </div>
     </section>

@@ -1,10 +1,10 @@
 import React from 'react'
-import { Bookmarks } from './pages/Bookmarks'
+import { Detail } from './pages/Detail'
 
 function App() {
   return (
     <div>
-      <Bookmarks />
+      <Detail />
     </div>
   )
 }

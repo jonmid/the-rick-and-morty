@@ -2,9 +2,9 @@ import React from 'react'
 
 import { Layout } from './../components/Layout'
 import { Logo } from '../components/Logo'
+import { TitlePage } from '../components/TitlePage'
 import { ListCharacter } from '../components/ListCharacter'
 import { Character } from '../components/Character'
-import { TitlePage } from '../components/TitlePage'
 
 const Bookmarks = () => {
   return (

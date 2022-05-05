@@ -1,11 +1,11 @@
 import React from 'react'
-import { TitlePage } from './components/TitlePage'
+import { Empty } from './components/Empty'
 
 function App() {
   return (
     <div>
       <h1 className='text-center text-3xl text-app-600 font-bold'>The Rick and Morty</h1>
-      <TitlePage title='Title The Page' />
+      <Empty title='Pagina' message='No se encontro datos para mostrar' />
     </div>
   )
 }

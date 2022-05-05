@@ -1,11 +1,10 @@
 import React from 'react'
-import { ButtonFavorite } from './components/ButtonFavorite'
+import { Home } from './pages/Home'
 
 function App() {
   return (
     <div>
-      <h1 className='text-center text-3xl text-app-600 font-bold'>The Rick and Morty</h1>
-      <ButtonFavorite />
+      <Home />
     </div>
   )
 }

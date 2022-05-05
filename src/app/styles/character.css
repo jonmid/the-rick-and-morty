@@ -7,7 +7,7 @@
 }
 
 .character__info {
-  @apply w-56 -mt-10 bg-white rounded-lg shadow-lg overflow-hidden;
+  @apply w-4/5 -mt-10 bg-white rounded-lg shadow-lg overflow-hidden;
 }
 
 .character__info--title {

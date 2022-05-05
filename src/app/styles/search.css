@@ -7,5 +7,5 @@
 }
 
 .search__button {
-  @apply flex justify-center items-center py-2 px-4 text-center text-base font-semibold bg-blue-600 text-white w-full transition ease-in duration-200 shadow-md rounded-lg hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-blue-200 focus:ring-offset-2 focus:ring-2 focus:outline-none;
+  @apply flex justify-center items-center py-2 px-4 text-center text-base font-semibold bg-app-600 text-white w-full transition ease-in duration-200 shadow-md rounded-lg hover:bg-app-700 focus:ring-app-500 focus:ring-offset-app-200 focus:ring-offset-2 focus:ring-2 focus:outline-none;
 }

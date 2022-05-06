@@ -2,9 +2,21 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 import { ICharacter, ICharacterState } from './../utilities/interfaces'
 
+// Initial localstorage
+const NAME_LOCALSTORAGE = 'BOOKMARKS'
+const localStorageCharacter = localStorage.getItem(NAME_LOCALSTORAGE)
+let parsedBookmarks: ICharacter[]
+
+if (!localStorageCharacter) {
+  localStorage.setItem(NAME_LOCALSTORAGE, JSON.stringify([]))
+  parsedBookmarks = []
+} else {
+  parsedBookmarks = JSON.parse(localStorageCharacter)
+}
+
 // Initial state for Redux store
 const initialState: ICharacterState = {
-  bookmarks: [],
+  bookmarks: parsedBookmarks,
   character: {}
 }
 
@@ -17,6 +29,9 @@ const characterSlice = createSlice({
     addBookmark: (state, action: PayloadAction<ICharacter>) => {
       if (!state.bookmarks.find(bookmark => bookmark.id === action.payload.id)) {
         state.bookmarks = [...state.bookmarks, action.payload]
+
+        const stringifiedCharacter = JSON.stringify(state.bookmarks)
+        localStorage.setItem(NAME_LOCALSTORAGE, stringifiedCharacter)
       }
     },
     removeBookmark: (state, action) => {

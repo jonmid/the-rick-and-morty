@@ -18,6 +18,12 @@ npm run dev
 
 Abrir el proyecto con la URL: [http://localhost:3000/](http://localhost:3000/ 'Link')
 
+## 🔖 Resultado Final
+
+Link Live example [https://the-rick-and-morty-inky.vercel.app/](https://the-rick-and-morty-inky.vercel.app/)
+
+![](/screenshot.png?raw=true 'Screenshot')
+
 ## 🧑🏻 Author
 
 **Jhonatan Mideros**

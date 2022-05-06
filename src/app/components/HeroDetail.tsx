@@ -2,23 +2,24 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
 import './../styles/heroDetail.css'
+import { IHeroDetailProps } from './../utilities/interfaces'
 
-const HeroDetail = () => {
+const HeroDetail = ({ character }: IHeroDetailProps) => {
   const navigate = useNavigate()
 
   return (
     <section className='hero-detail'>
       <div className='hero-detail__container'>
         <div className='hero-detail__container--image'>
-          <img className='object-cover object-center rounded' alt='hero' src='https://dummyimage.com/720x600' />
+          <img className='object-cover object-center rounded' alt='hero' src={character.image} />
         </div>
 
         <div className='hero-detail__info'>
-          <h1>Before they sold out readymade gluten</h1>
+          <h1>{character.name}</h1>
 
           <p>
-            Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic tumeric
-            truffaut hexagon try-hard chambray.
+            <span className='mr-2 font-bold text-app-700 uppercase'>specie:</span>
+            {character.species}
           </p>
 
           <button onClick={() => navigate(-1)}>Return</button>

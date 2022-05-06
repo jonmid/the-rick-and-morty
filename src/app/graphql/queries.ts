@@ -13,6 +13,7 @@ export const LIST_CHARACTERS = gql`
         id
         name
         image
+        species
       }
     }
   }

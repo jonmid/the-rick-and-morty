@@ -1,14 +1,22 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
 
 import './../styles/character.css'
 import { ICharacterProps } from './../utilities/interfaces'
+import { addCharacter } from '../store/character.slice'
 
-const Character = ({ character }: ICharacterProps) => {
+const Character = ({ character, titleButton, handleClick }: ICharacterProps) => {
   const navigate = useNavigate()
+  const dispatch = useDispatch()
 
   const handleClickDetail = () => {
+    dispatch(addCharacter({ id: character.id, name: character.name, image: character.image, species: character.species }))
     navigate(`/detail`)
+  }
+
+  const handleClickBookmarks = () => {
+    handleClick(character)
   }
 
   return (
@@ -19,7 +27,9 @@ const Character = ({ character }: ICharacterProps) => {
         <h3 className='character__info--title'>{character.name}</h3>
 
         <section className='character__info--section'>
-          <button>Add to favorite</button>
+          <button type='button' onClick={() => handleClickBookmarks()}>
+            {titleButton}
+          </button>
         </section>
       </div>
     </div>

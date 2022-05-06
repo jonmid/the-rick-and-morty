@@ -1,8 +1,8 @@
-import { useQuery } from '@apollo/client'
+import { useQuery, useLazyQuery } from '@apollo/client'
 
 import { LIST_CHARACTERS } from '../graphql/queries'
 
-export const useCharacter = () => {
-  const result = useQuery(LIST_CHARACTERS)
+export const useSearchCharacter = () => {
+  const result = useLazyQuery(LIST_CHARACTERS)
   return result
 }

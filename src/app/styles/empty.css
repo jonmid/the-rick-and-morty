@@ -1,5 +1,5 @@
 .empty {
-  @apply container mx-auto;
+  @apply w-full mt-10;
 }
 
 .empty__border {
@@ -11,7 +11,7 @@
 }
 
 .empty__info h1 {
-  @apply text-5xl font-bold text-gray-700;
+  @apply text-3xl font-bold text-gray-700;
 }
 
 .empty__info p {

@@ -1,20 +1,25 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import './../styles/home.css'
 import { ICharacter } from './../utilities/interfaces'
-import { useCharacter } from './../hooks/useCharacter'
+import { useSearchCharacter } from './../hooks/useCharacter'
 import { Search } from '../components/Search'
 import { ListCharacter } from '../components/ListCharacter'
 import { Character } from '../components/Character'
 import { ButtonFavorite } from '../components/ButtonFavorite'
 import { Loader } from '../components/Loader'
+import { Empty } from '../components/Empty'
 
 const Home = () => {
-  const { data, loading, error } = useCharacter()
+  const [getData, { data, loading, error }] = useSearchCharacter()
+
+  useEffect(() => {
+    getData({ variables: { nameToSearch: '' } })
+  }, [])
 
   return (
     <>
-      <Search />
+      <Search getData={getData} />
 
       <div className='home-favorite'>
         <ButtonFavorite />
@@ -24,11 +29,17 @@ const Home = () => {
       {loading ? (
         <Loader />
       ) : (
-        <ListCharacter>
-          {data?.characters.results.map((item: ICharacter) => (
-            <Character key={item.id} character={item} />
-          ))}
-        </ListCharacter>
+        <>
+          {data !== undefined ? (
+            <ListCharacter>
+              {data?.characters.results.map((item: ICharacter) => (
+                <Character key={item.id} character={item} />
+              ))}
+            </ListCharacter>
+          ) : (
+            <Empty title='Character Not Found' message='verify the information you entered' />
+          )}
+        </>
       )}
     </>
   )

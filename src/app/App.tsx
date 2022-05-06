@@ -6,6 +6,7 @@ import { Logo } from './components/Logo'
 import { Home } from './pages/Home'
 import { Bookmarks } from './pages/Bookmarks'
 import { Detail } from './pages/Detail'
+import { NickNames } from './pages/NickNames'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/bookmarks' element={<Bookmarks />} />
         <Route path='/detail' element={<Detail />} />
+        <Route path='/listnicknames' element={<NickNames />} />
         <Route path='*' element={<h1>NotFound</h1>} />
       </Routes>
     </Layout>

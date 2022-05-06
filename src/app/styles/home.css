@@ -1,5 +1,5 @@
 .home-favorite {
-  @apply flex items-center space-x-4 mt-20;
+  @apply flex items-center space-x-4;
 }
 
 .home-favorite--text {

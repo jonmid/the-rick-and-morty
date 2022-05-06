@@ -28,9 +28,16 @@ const Home = () => {
     <>
       <Search getData={getData} />
 
-      <div className='home-favorite'>
-        <ButtonFavorite />
-        <span className='home-favorite--text'>Show favorites</span>
+      <div className='flex flex-col space-y-4 mt-20 sm:flex-row sm:space-y-0 sm:space-x-8'>
+        <div className='home-favorite'>
+          <ButtonFavorite path='bookmarks' icono={1} />
+          <span className='home-favorite--text'>Show favorites</span>
+        </div>
+
+        <div className='home-favorite'>
+          <ButtonFavorite path='listnicknames' icono={2} />
+          <span className='home-favorite--text'>Show list nick name</span>
+        </div>
       </div>
 
       {loading ? (

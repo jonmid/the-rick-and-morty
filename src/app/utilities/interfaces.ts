@@ -19,6 +19,16 @@ export interface BreadcrumbsProps {
   title: string
 }
 
+export interface IListNicknamesProps {
+  names: string[]
+  order: string
+}
+
+export interface IButtonProps {
+  path: string
+  icono: number
+}
+
 export interface EmptyProps {
   title: string
   message: string

@@ -1,11 +1,7 @@
 import React from 'react'
 
 import './../styles/empty.css'
-
-type EmptyProps = {
-  title: string
-  message: string
-}
+import { EmptyProps } from './../utilities/interfaces'
 
 const Empty = ({ title, message }: EmptyProps) => {
   return (

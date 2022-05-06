@@ -1,10 +1,7 @@
 import React from 'react'
+import { Props } from './../utilities/interfaces'
 
-type LayoutProps = {
-  children: JSX.Element | JSX.Element[]
-}
-
-const Layout = ({ children }: LayoutProps) => {
+const Layout = ({ children }: Props) => {
   return <div className='container mx-auto flex flex-col px-4 md:px-0'>{children}</div>
 }
 

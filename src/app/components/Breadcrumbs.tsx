@@ -2,10 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 import './../styles/breadcrumbs.css'
-
-type BreadcrumbsProps = {
-  title: string
-}
+import { BreadcrumbsProps } from './../utilities/interfaces'
 
 const Breadcrumbs = ({ title }: BreadcrumbsProps) => {
   return (

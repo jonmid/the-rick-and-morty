@@ -36,6 +36,9 @@ const characterSlice = createSlice({
     },
     removeBookmark: (state, action) => {
       state.bookmarks = state.bookmarks.filter(item => item.id !== action.payload)
+
+      const stringifiedCharacter = JSON.stringify(state.bookmarks)
+      localStorage.setItem(NAME_LOCALSTORAGE, stringifiedCharacter)
     },
     addCharacter: (state, action: PayloadAction<ICharacter>) => {
       state.character.id = action.payload.id

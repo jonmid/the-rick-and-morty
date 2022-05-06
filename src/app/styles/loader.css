@@ -1,0 +1,7 @@
+.loader {
+  @apply flex items-center justify-center mt-10 text-app-600;
+}
+
+.loader svg {
+  @apply w-20 h-20 animate-spin;
+}

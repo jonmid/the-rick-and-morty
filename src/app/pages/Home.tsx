@@ -7,11 +7,10 @@ import { Search } from '../components/Search'
 import { ListCharacter } from '../components/ListCharacter'
 import { Character } from '../components/Character'
 import { ButtonFavorite } from '../components/ButtonFavorite'
+import { Loader } from '../components/Loader'
 
 const Home = () => {
   const { data, loading, error } = useCharacter()
-
-  console.log(data?.characters.results)
 
   return (
     <>
@@ -23,7 +22,7 @@ const Home = () => {
       </div>
 
       {loading ? (
-        <h1>Cargando ....</h1>
+        <Loader />
       ) : (
         <ListCharacter>
           {data?.characters.results.map((item: ICharacter) => (
